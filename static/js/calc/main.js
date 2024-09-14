@@ -1,0 +1,1 @@
+console.log('this comes from "frontendfolder/static/js/calc/main.js"')
