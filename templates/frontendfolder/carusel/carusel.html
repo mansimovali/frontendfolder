@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="{% static 'css/general/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carusel/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">Mansimov</div>
+        <nav>
+            <a href="#a">Home</a>
+            <a href="#b">Contact Us</a>
+            <a href="#c">Info</a>
+        </nav>
+    </header>
+
+    <div class="carusel">
+            <div class="list">
+
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/git-img.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Version Control</div>
+                        <div class="topic">Git</div>
+                        <div class="des">Git is distributed version control system</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+    
+                    <div class="detail">
+                        <div class="title">Git</div>
+                        <div class="des">Git is used to track changes on files and directories, to share projects with others easily etc.</div>
+                        <div class="specifications">
+                            <div>
+                                <p>Came Out</p>
+                                <p>21 Dec 2005</p>
+                            </div>
+                            <div>
+                                <p>Some commands of Git</p>
+                                <p>commit, push, clone</p>
+                            </div>
+                            <div>
+                                <p>Github</p>
+                                <p>repository on cloud</p>
+                            </div>
+                            <div>
+                                <p>Learning curve</p>
+                                <p>Easy</p>
+                            </div>
+                            <div>
+                                <p>Tutorial on Youtube</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=3FKrszHcIsA">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understood</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/html-pic.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Web Development</div>
+                        <div class="topic">HTML</div>
+                        <div class="des">Hyper Text Markup Language is the backbone of World Wide Web</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+    
+                    <div class="detail">
+                        <div class="title">HTML</div>
+                        <div class="des"> is the standard markup language for documents designed to be displayed in a web browser.</div>
+                        <div class="specifications">
+                            <div>
+                                <p>Stands for</p>
+                                <p>Hyper Text Markup Language</p>
+                            </div>
+                            <div>
+                                <p>Came out</p>
+                                <p>December 1993</p>
+                            </div>
+                            <div>
+                                <p>Learning curve</p>
+                                <p>Easy</p>
+                            </div>
+                            <div>
+                                <p>Tutorail on web</p>
+                                <p><a target="_blank" href="https://www.w3schools.com/html/">go to</a></p>
+                            </div>
+                            <div>
+                                <p>Tutorial on youtube</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=mJgBOIoGihA">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understood</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/css-pic.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Web development</div>
+                        <div class="topic">CSS</div>
+                        <div class="des">CSS is used to style web pages.CSS describes how HTML elements are to be displayed on screen, paper, or in other media</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+                    <div class="detail">
+                        <div class="title">about CSS</div>
+                        <div class="des"> CSS saves a lot of work. It can control the layout of multiple web pages all at once</div>
+                        <div class="specifications">
+                            <div>
+                                <p>Stands for</p>
+                                <p>Cascading Style Sheets</p>
+                            </div>
+                            <div>
+                                <p>First Came out</p>
+                                <p>17 Dec 1996</p>
+                            </div>
+                            <div>
+                                <p>Learning curve</p>
+                                <p>Moderate</p>
+                            </div>
+                            <div>
+                                <p>Tutorial on web</p>
+                                <p><a href="https://www.w3schools.com/css/css_intro.asp">w3schools</a></p>
+                            </div>
+                            <div>
+                                <p>Tutorail on Youtube</p>
+                                <p><a href="https://www.youtube.com/watch?v=OXGznpKZ_sA">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understood</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/javascript-img.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Programming Language</div>
+                        <div class="topic">JavaScript</div>
+                        <div class="des">JavaScript is great scripting language, it is essential for webdevelopment, especially for frontend development</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+    
+                    <div class="detail">
+                        <div class="title">Web Development</div>
+                        <div class="des">JavaScript is used both frontend and backend web development. It can be used for developing desktop and mobile applications</div>
+                        <div class="specifications">
+                            <div>
+                                <p>FrontEnd</p>
+                                <p>React</p>
+                            </div>
+                            <div>
+                                <p>BackEnd</p>
+                                <p>Nextjs</p>
+                            </div>
+                            <div>
+                                <p>Came out</p>
+                                <p>4 Dec 1995</p>
+                            </div>
+                            <div>
+                                <p>Tutorial on Web</p>
+                                <p><a target="_blank" href="https://www.w3schools.com/js/">go to</a></p>
+                            </div>
+                            <div>
+                                <p>Tutorial on YouTube</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=EfAl9bwzVZk">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understood</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/python-ability.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Programming Languages</div>
+                        <div class="topic">Python</div>
+                        <div class="des">Python is a high-level, general-purpose, dynamically typed and garbage-collected, scripting programming language.</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+    
+                    <div class="detail">
+                        <div class="title">Python programming language</div>
+                        <div class="des">It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming</div>
+                        <div class="specifications">
+                            <div>
+                                <p>Came out</p>
+                                <p>20 Feb 1991</p>
+                            </div>
+                            <div>
+                                <p>Creator</p>
+                                <p>Guido van Rossum</p>
+                            </div>
+                            <div>
+                                <p>Learning curve</p>
+                                <p>Easy</p>
+                            </div>
+                            <div>
+                                <p>Tutorail on Web</p>
+                                <p><a target="_blank" href="https://www.w3schools.com/python/">w3schools</a></p>
+                            </div>
+                            <div>
+                                <p>Tutorial on Youtube</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=ix9cRaBkVe0">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understand</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <img src="{% static 'imgs/carusel/django-picture.png' %}" alt="">
+                    <div class="intro">
+                        <div class="title">Web Dvelopment</div>
+                        <div class="topic">Django</div>
+                        <div class="des">Django is powerful web framework</div>
+                        <button class="seeMore">seeMore &#8599</button>
+                    </div>
+    
+                    <div class="detail">
+                        <div class="title">Python-Django</div>
+                        <div class="des">Django is python-based great backend web development framework. It has very good security features</div>
+                        <div class="specifications">
+                            <div>
+                                <p>Came out</p>
+                                <p>July 2005</p>
+                            </div>
+                            <div>
+                                <p>built with django</p>
+                                <p>
+                                    <a target="_blank" href="https://www.instagram.com/">Instagram</a>
+                                    <a target="_blank" href="https://www.youtube.com/">YouTube</a>
+                                    <a target="_blank" href="https://open.spotify.com/">Spotify</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>Learning curve</p>
+                                <p>Moderate</p>
+                            </div>
+                            <div>
+                                <p>Tutorial on Web</p>
+                                <p><a target="_blank" href="https://docs.djangoproject.com/en/5.1/intro/tutorial01/">docs</a></p>
+                            </div>
+                            <div>
+                                <p>Tutorial on YouTube</p>
+                                <p><a target="_blank" href="https://www.youtube.com/watch?v=fOukA4Qh9QA&t=18s">go to</a></p>
+                            </div>
+                        </div>
+                        <div class="checkout">
+                            <button>I didn't understand</button>
+                            <button>I understood</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="back">Go Back &#8599</button>
+            <button id="next">></button>
+        </div>
+    </div>
+    <script src="{% static 'js/carusel/carusel.js' %}"></script>
+</body>
+</html>
