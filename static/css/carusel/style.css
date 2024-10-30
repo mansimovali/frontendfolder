@@ -47,6 +47,8 @@ nav a:hover, nav a:focus, nav a:focus-visible, nav a:focus-within{
     color: rgb(85, 191, 226);
 }
 
+body{margin: 0;padding: 0;}
+
 
 header{
     width: 80wv;
