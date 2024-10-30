@@ -460,7 +460,7 @@ header nav a{
 }
 
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
     .carusel.showDetail .list .item:nth-child(2) .detail{
         top: 50%;
         width: 55%;
@@ -472,7 +472,7 @@ header nav a{
     }
 
     .carusel.showDetail .list .item:nth-child(2) img{
-        width: 50%;
+        width: 80%;
     }
 
     .carusel.showDetail .list .item .detail .specifications{
