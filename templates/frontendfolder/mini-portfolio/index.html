@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini portfolio</title>
+  <link rel="shortcut icon" href="{% static 'imgs/mini-portfolio/assets/favicon-blue-32x32.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/mini-portfolio/navbar-style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mini-portfolio/main-section.css' %}">
+
+  <script defer src="{% static 'js/mini-portfolio/navbar.js' %}"></script>
+  <script defer src="{% static 'js/mini-portfolio/main-section.js' %}"></script>
+  <script defer src="{% static 'js/mini-portfolio/finder.js' %}"></script>
+</head>
+<body>
+    <nav id="sidebar">
+      <ul class="">
+        <li>
+          <span class="logo">MansimovCode</span>
+          <button tabindex="0" onclick="toggleSidebar()" id="toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/>
+            </svg>
+          </button>
+        </li>
+        <li class="header-list">
+          <a class="header-link" href="{% url 'frontend-url:mini-portfolio-url' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="header-list">
+          <a class="header-link" href="{% url 'frontend-url:mini-dashboard-url' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="">
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/>
+            </svg>
+            <span>Create</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="">Folder</a></li>
+              <li><a href="">Document</a></li>
+              <li><a href="">Project</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/>
+            </svg>
+            <span>Todo Lists</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="">Work</a></li>
+              <li><a href="">Private</a></li>
+              <li><a href="">Coding</a></li>
+              <li><a href="">Sport</a></li>
+              <li><a href="">Guitar</a></li>
+            </div>
+          </ul>
+        </li>
+        <li class="header-list">
+          <a class="header-link" href="{% url 'frontend-url:mini-calendar-url' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/>
+            </svg>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li class="header-list">
+          <a class="header-link" href="{% url 'frontend-url:mini-profile-url' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/>
+            </svg>
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  <main>
+  
+    <article class="hero-article">
+
+      <section class="hero">
+
+        <img tabindex="0" class="theme-btn" id="toggleTheme" src="{% static 'imgs/mini-portfolio/assets/theme_dark.png' %}" alt="theme icon" title="theme mode">
+  
+        <div class="hero-pic">
+          <div class="inner-circle"></div>
+          <img src="{% static 'imgs/mini-portfolio/assets/profil-sekili.jpg' %}" alt="portfolio picture" title="Ali Mansimov">
+        </div>
+  
+        <div class="hero-info">
+          <h1>Ali Mansimov</h1>
+          <h2>Frontend Developer</h2>
+          <div class="logo-container">
+            <a href="mailto:mansimov@gmail.com">
+              <img class="theme-icon email" src="{% static 'imgs/mini-portfolio/assets/email_light.png' %}" alt="email logo" title="send email">
+            </a>
+            <a href="">
+              <img class="theme-icon linkedin" src="{% static 'imgs/mini-portfolio/assets/linkedin_light.png' %}" alt="social media" title="linkedin">
+            </a>
+            <a href="">
+              <img class="theme-icon github" src="{% static 'imgs/mini-portfolio/assets/github_light.png' %}" alt="social media" title="instagram">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <h2> <b>2</b>  <br> Years <br> Frontend </h2>
+        <h2> <b>5</b>  <br> Completed <br> Projects </h2>
+        <h2> <b>5</b>  <br> Satisfied <br> Customers </h2>
+      </section>
+
+      <section class="cta">
+        <a href="" download>
+          <button class="btn download-btn">Download CV</button>
+        </a>
+        <a href="mailto:alimansimov085@gmail.com">
+          <button class="btn contact-btn">Contact Me</button>
+        </a>
+      </section>
+
+      <section class="portfolio-skills">
+        <div class="btn-bg">
+          <button class="btn-2 active-btn portfolio-btn" id="portfolio-btn">Portfolio</button>
+          <button class="btn-2 skills-btn" id="skills-btn">Skills</button>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="wrapper project-wrapper">
+          <a href="">
+            <img src="{% static 'imgs/mini-portfolio/assets/project-1.png' %}" alt="picture album" title="picture album">
+          </a>
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="">
+            <img src="{% static 'imgs/mini-portfolio/assets/project-2.png' %}" alt="picture album" title="picture album">
+          </a>
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="">
+            <img src="{% static 'imgs/mini-portfolio/assets/project-3.png' %}" alt="picture album" title="picture album">
+          </a>
+        </div>
+        <div class="wrapper project-wrapper">
+          <a href="">
+            <img src="{% static 'imgs/mini-portfolio/assets/project-1.png' %}" alt="picture album" title="picture album">
+          </a>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+
+        <div class="wrapper">
+          <h3>Frontend</h3>
+          <section class="frontend-skills">
+            <button data-info="HTML" class="explanation-btn" type="button">HTML</button>
+            <button data-info="CSS" class="explanation-btn" type="button">CSS</button>
+            <button data-info="SASS" class="explanation-btn" type="button">SASS</button>
+            <button data-info="JavaScript" class="explanation-btn" type="button">JavaScript</button>
+            <button data-info="TypeScript" class="explanation-btn" type="button">TypeScript</button>
+            <button data-info="ReactJs" class="explanation-btn" type="button">ReactJs</button>
+            <button data-info="using SVG" class="explanation-btn" type="button">using SVG</button>
+            <button data-info="image optimization" class="explanation-btn" type="button">image optimization</button>
+            <button data-info="lazy load content" class="explanation-btn" type="button">lazy load content</button>
+            <button data-info="animations" class="explanation-btn" type="button">animations</button>
+            <button data-info="accessibility on web" class="explanation-btn" type="button">accessibility on web</button>
+          </section>
+        </div>
+
+        <section class="explanation wrapper">
+          <p class="" data-info="HTML">HTML is backbone of web. It stands for Hyper Text Markup Language. Browsers render web content based on HTML tags (elements), so HTML tags have meaning for browsers.</p>
+          <p class="" data-info="CSS">CSS stands for Cascade Style Sheet and is used to give style to a web</p>
+          <p data-info="SASS">SASS is pre-compiler for CSS. it gives programming capabilities to CSS, so you can make functions, arrays, varibales and do loops .etc for CSS</p>
+          <p data-info="JavaScript">JavaScript is official programming language for web. All browsers (Google, FireFox, Safari etc.) run JavaScript code. JavaScript can be used both on frontend and on backend for web</p>
+          <p data-info="TypeScript">TypeScript is superset of JavaScript</p>
+          <p data-info="ReactJs">ReactJs is technically JavaScript library and used to develop frontend of web</p>
+          <p data-info="using SVG">SVG is stands for Scalable Vertor Grapich. it is used mostly for icons.</p>
+          <p data-info="image optimization">Image Optimization is essential for the speed of website, in other words, the load time of website. Images are not light weight digital assets and if a website has a lot of images then its speed drops down if image optimization is not implemented. Implement IntersectionObserver using JavaScript and image resize, image optimization solves this problem </p>
+          <p data-info="lazy load content">lazy load content can be explained like this 'show content as user scrolls down'</p>
+          <p data-info="animations">animations is fun on web</p>
+          <p data-info="accessibility on web">Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. Accessible navbar, form is essential for web, thus 
+            your website will be accesible by everyone
+          </p>
+        </section>
+
+        <div class="wrapper">
+          <h3>Backend</h3>
+          <section class="backend-skills">
+            <button data-info="Python" class="explanation-btn" type="button">Python</button>
+            <button data-info="Django" class="explanation-btn" type="button">Django</button>
+            <button data-info="Postgresql" class="explanation-btn" type="button">Postgresql</button>
+            <button data-info="Git" class="explanation-btn" type="button">Git</button>
+            <button data-info="Linux" class="explanation-btn" type="button">Linux</button>
+            <button data-info="Windows" class="explanation-btn" type="button">Windows</button>
+            <button data-info="Web Servers" class="explanation-btn" type="button">Web Servers</button>
+            <button data-info="NodeJs" class="explanation-btn" type="button">NodeJs</button>
+            <button data-info="ExpressJs" class="explanation-btn" type="button">ExpressJs</button>
+            <button data-info="NextJs" class="explanation-btn" type="button">NextJs</button>
+            <button data-info="MongoDB" class="explanation-btn" type="button">MongoDB</button>
+            <button data-info="APIs" class="explanation-btn" type="button">APIs</button>
+            <button data-info="Regex" class="explanation-btn" type="button">Regex</button>
+          </section>
+        </div>
+
+        <section class="explanation wrapper">
+          <p data-info="Python">Python is general purpose powerful a programming language. It is used mainly on AI development, machine learning, data sience, web development and much more areas on web
+          </p>
+          <p data-info="Django">Django is python based backend web framework of webdevelopement</p>
+          <p data-info="Postgresql">Postgresql is very powerfull database engine.</p>
+          <p data-info="Git">Git is version control system. it has its own hashed filesystem</p>
+          <p data-info="Linux">Linux is Unix-like operating system and backbone of tech world. Most of servers run on Linux system</p>
+          <p data-info="Windows">Windows is most used operating system by end-users</p>
+          <p data-info="Web Servers">Web Servers are resposible for serving web data. Web data is everything is used in World Wide Web.</p>
+          <p data-info="NodeJs">NodeJs is JavaScript runtime. </p>
+          <p data-info="ExpressJs"> Express is a NodeJs web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. </p>
+          <p data-info="NextJs">NextJs is used for frontend development but also can be used as backend. NextJs enables you to create high-quality web applications with the power of React components.</p>
+          <p data-info="MongoDB">MongoDB is built on a scale-out architecture. It is NoSQL database. As a document database, MongoDB can store structured or unstructured data. It uses a JSON-like format to store documents.</p>
+          <p data-info="APIs">API stands for Application Programming Interface. In the context of APIs, the word Application refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.</p>
+          <p data-info="Regex">Regex stands for Regular Expression.Regexes are simple yet powerful language for defining patterns for sets of strings. It is extremely and amazingly powerful in searching and manipulating text strings, particularly in processing text files. One line of regex can easily replace several dozen lines of programming codes. </p>
+        </section>
+
+      </section>
+
+    </article>
+  </main>
+
+  <footer>&copy; ~ Mansimov Ali ~</footer>
+
+  <script>
+    //Light and Dark mode
+    document.addEventListener('DOMContentLoaded',()=>{
+      const toggleThemeButton=document.getElementById('toggleTheme');
+      const themeLogo=document.querySelector('img[alt="theme icon"]');
+
+      const emailLogo=document.querySelector('.email');
+      const linkedinLogo=document.querySelector('.linkedin');
+      const githubLogo=document.querySelector('.github');
+
+      const darkLogos={
+        github:"{% static 'imgs/mini-portfolio/assets/github_light.png' %}",
+        linkedin:"{% static 'imgs/mini-portfolio/assets/linkedin_light.png' %}",
+        email:"{% static 'imgs/mini-portfolio/assets/email_light.png' %}",
+        theme:"{% static 'imgs/mini-portfolio/assets/theme_dark.png' %}",
+      };
+
+      const lightLogos={
+        github:"{% static 'imgs/mini-portfolio/assets/github_dark.png' %}",
+        linkedin:"{% static 'imgs/mini-portfolio/assets/linkedin_dark.png' %}",
+        email:"{% static 'imgs/mini-portfolio/assets/email_dark.png' %}",
+        theme:"{% static 'imgs/mini-portfolio/assets/theme_light.png' %}",
+      };
+
+      function setTheme(isDark){
+        githubLogo.src= isDark ? darkLogos.github : lightLogos.github;
+        linkedinLogo.src= isDark ? darkLogos.linkedin : lightLogos.linkedin;
+        emailLogo.src= isDark ? darkLogos.email : lightLogos.email;
+        themeLogo.src= isDark ? darkLogos.theme : lightLogos.theme;
+      }
+
+      const loadTheme=()=>{
+        const isDark=localStorage.getItem('Dark')=='true';
+        document.body.classList.toggle('dark-theme',isDark);
+        setTheme(isDark);
+      };
+
+      loadTheme();
+
+      toggleThemeButton.addEventListener('click',()=>{
+        const isDark=document.body.classList.toggle('dark-theme');
+        localStorage.setItem('Dark',isDark);
+        setTheme(isDark);
+      })
+
+    })
+  </script>
+
+</body>
+</html>

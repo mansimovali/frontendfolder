@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Driving Car</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/bmw/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'imgs/bmw/bmw-logo.svg' %}" type="image/x-icon">
+    <style>
+        .featured{
+          background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)) border-box, url("{% static 'imgs/bmw/bmw-yellow.jpeg' %}") no-repeat center;
+          background-size: cover;
+        }
+        .sub1{
+          background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)) border-box, url("{% static 'imgs/bmw/bmw-black.jpeg' %}") no-repeat center;
+          background-size: cover;
+        }
+        .sub2{
+          background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)) border-box, url("{% static 'imgs/bmw/bmw-black-front.jpeg' %}") no-repeat center;
+          background-size: cover;
+        }
+        .sub3{
+          background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)) border-box, url("{% static 'imgs/bmw/bmw-front.jpeg' %}") no-repeat center;
+          background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-wrapper">
+            <div class="logo">
+                 <img src="{% static 'imgs/bmw/bmw-logo.jpeg' %}" alt="logo img" title="bmw logo"> <strong>German machine</strong>
+            </div>
+            <button class="burger-icon"><i class="fas fa-bars"></i></button>
+            <ul class="nav-items main-nav mobile-hide">
+                <li class="list-item"><a href="">Home</a></li>
+                <li class="list-item"><a href="">Gallery</a></li>
+                <li class="list-item"><a href="">About us</a></li>
+                <li class="list-item"><a href="">Products</a></li>
+                <li class="list-item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <div class="featured">
+                    <div id="meta">Mansimov Ali</div>
+                    <h1>Today our guest is 'The Ultimate Driving Machine', yeah <strong>'BMW'</strong></h1>
+                    <span id="hero-date">September 26, 2024</span>
+                </div>
+                <div class="sub-featured">
+                    <div class="sub1">
+                        <h3>Something Great</h3>
+                    </div>
+                    <div class="sub2">
+                        <h3>Couldn't Be Better</h3>
+                    </div>
+                    <div class="sub3">
+                        <h3>Wait Until </h3>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <p>
+                      Bayerische Motoren Werke AG, commonly abbreviated to BMW (German pronunciation: [ˌbeːʔɛmˈveː], is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich, Bavaria, Germany. The company was founded in 1916 as a manufacturer of aircraft engines, which it produced from 1917 to 1918 and again from 1933 to 1945 creating engines for aircraft that were used in the Second World War. The companies automobiles are marketed under the BMW, Mini and Rolls-Royce brands, and motorcycles are marketed under the BMW Motorrad brand. In 2023, BMW was the world's ninth-largest producer of motor vehicles, with 2,555,341 vehicles produced[3] and in 2022 the 7th largest by revenue
+                    </p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
+                </div>
+                <div class="main-sidebar">
+                    <div class="email-digest-subscription">
+                        <h2>Weekly Email Update</h2>
+                        <p>Subscribe below and we’ll send you a weekly email summary of our latest and gratest gadgets and all of the spam that you'll be able to handle!
+                        </p>
+                        <form id="subscribe" action="" accept-charset="UTF-8" method="post">
+                            <input id="email" name="email" class="email" placeholder="Enter your Email Address" type="email">
+                            <button name="button" type="submit" class="subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+      <div class="footer-wrapper">
+
+        <div class="foot1 ">
+            <h3>German Machine</h3>
+            <br>
+            <p>345 Street Suite 34</p>
+            <p>New York, Germany</p>
+            <br>
+            <p>545-456-4565</p>
+        </div>
+        <div class="foot2 ">
+            <h3>Social Media</h3>
+           <ul class="social-footer">
+            <li tabindex="0" class="footer-li">
+              <a><i class="fa-brands fa-square-facebook"></i></a>
+              <a>Facebook</a>
+            </li>
+            <li  tabindex="0" class="footer-li">
+              <a><i class="fa-brands fa-square-instagram"></i></a>
+              <a>Instagram</a>
+            </li>
+            <li tabindex="0" class="footer-li">
+              <a><i class="fa-brands fa-linkedin"></i></a>
+              <a>Linkedln</a>
+            </li>
+            <li tabindex="0" class="footer-li">
+              <a><i class="fa-brands fa-twitter"></i></a>
+              <a>Twitter</a>
+            </li>
+           </ul>
+        </div>
+
+        <div class="foot3 ">
+            <h3>Author</h3>
+            <a target="_blank" class="go-to-portfolio" href="">~Mansimov~</a> <span>&copy; 2024</span>
+        </div>
+
+      </div>
+    </footer>
+
+    <script>
+        const icon=document.querySelector('.burger-icon');
+        const menu=document.querySelector('.main-nav');
+
+        icon.addEventListener('click',()=>{
+            if (menu.classList.contains('mobile-hide')){
+                menu.classList.remove('mobile-hide');
+                menu.classList.add('mobile-show');
+            }else{
+                menu.classList.remove('mobile-show');
+                menu.classList.add('mobile-hide');
+            }
+        })
+    </script>
+</body>
+</html>
