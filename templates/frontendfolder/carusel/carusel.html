@@ -12,9 +12,9 @@
     <header>
         <div class="logo">Mansimov</div>
         <nav>
-            <a href="#a">Home</a>
-            <a href="#b">Contact Us</a>
-            <a href="#c">Info</a>
+            <a href="{% url 'frontend-url:portfolio-url' %}">Home</a>
+            <a href="{% url 'frontend-url:welcome-url' %}">Info</a>
+            <a href="{% url 'frontend-url:coming-soon-url' %}">Contact</a>
         </nav>
     </header>
 

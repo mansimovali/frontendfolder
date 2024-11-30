@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coming soon</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100svh; flex-direction: column;">
+  <h1>Coming Soon</h1>
+
+  <p id="previous-link">Loading...</p>
+
+  <script>
+      // Get the previous page's URL
+      const previousLink = document.referrer;
+
+      // Display it on the page
+      const previousLinkElement = document.getElementById('previous-link');
+      if (previousLink) {
+          previousLinkElement.innerHTML = `<a href="${previousLink}">Go Back</a>`;
+      } else {
+          previousLinkElement.innerHTML = "No referrer information is available.";
+      }
+  </script>
+</body>
+</html>

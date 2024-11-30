@@ -93,7 +93,7 @@ svg{
 }
 .primary-navigation a > [aria-hidden='true']{
   font-weight: 700;
-  margin-inline: .75em;
+  margin-inline-end: .75em;
 }
 
 .primary-navigation a:hover
@@ -118,6 +118,9 @@ svg{
       flex-direction: column;
     }
   }
+
+  .text-white{color:hsl(0, 0%, 100%);}
+  nav li{padding-left: 1rem;}
 
   .primary-navigation[data-visible="true"]{
     transform: translateX(0);
